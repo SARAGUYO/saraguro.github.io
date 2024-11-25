@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding-top: 90px;
+    background-color: #e9cb97; 
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #ffbf5f; /* Soft orange */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+header h1 {
+    font-size: 3em; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.hero {
+   background-color:#ffcc66; /* Light orange */
+   text-align:center; 
+   padding:60px 20px; 
+   position:relative; 
+}
+
+.profile-image {
+   width:150px; 
+   height:auto; 
+   border-radius:50%; 
+   margin-bottom:20px; 
+   animation:bounceIn 1s ease forwards;
+}
+
+.social-links {
+   margin-top:15px; 
+}
+
+.social-links a {
+   color:#623a03; 
+   margin-right:15px; 
+   text-decoration:none; 
+   padding:5px 10px;
+   border-radius:5px; 
+   background-color:#ffffff; /* Orange */
+}
+
+.about, .projects, .skills, .contact {
+    padding: 60px 20px; 
+}
+
+.about h2, .projects h2, .skills h2, .contact h2 {
+   color:#c27a0f; /* Orange */
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #6e4e0c; /* Light orange */
+}
+
+.skills-container {
+   display:flex; 
+   flex-direction:column; 
+   gap:20px; 
+}
+
+.skill-item {
+   animation:bounceInUp .5s ease forwards; 
+   opacity:.5; 
+   transition-delay:.1s * var(--i); 
+}
+
+.progress-bar {
+   background-color:#f4d6b8; /* Light peach */
+   border-radius:5px; 
+   overflow:hidden; 
+   height:30px; 
+   width:100%; 
+   margin-top:.5rem; 
+}
+
+.progress {
+   background-color:#ca9b3e; /* Light orange */
+   height:100%; 
+   border-radius:.5rem; 
+   transition:.5s ease-in-out; 
+}
+
+.contact form {
+   display:flex; 
+   flex-direction:column; 
+}
+
+.contact input,
+.contact textarea {
+   margin-bottom:.5rem; 
+   padding:.75rem; 
+   border-radius:.5rem; 
+   border:none; 
+   box-shadow:.1rem .1rem .5rem rgba(0,0,0,.1); 
+}
+
+.contact button {
+   background-color:#f7a730; /* Light orange */
+   color:white; 
+   border:none; 
+   padding:.75rem; 
+   border-radius:.5rem; 
+   cursor:pointer; 
+}
+
+
+footer {
+   text-align:center; 
+   padding:.75rem ; 
+   background-color:#ca9b3e ; /* Soft orange */
+}
+
+@media (max-width: 600px) {
+     header h1 { font-size: 2.5em;}
+     .hero h2 { font-size :1.8em;}
+     h2 { font-size :1.6em;}
+     .project-card {padding:.75rem;}
+     .social-links a {font-size:.9em;}
+}
+@keyframes bounceInUp {
+     from {opacity :0 ; transform :translateY(20px);}
+     to {opacity :1 ; transform :translateY(0);}
+}
+@keyframes bounceIn {
+     from {opacity :0 ; transform :translateY(-30px);}
+     to {opacity :1 ; transform :translateY(0);}
+}
